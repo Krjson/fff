@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBSTYLE - ДИЗАЙНЕРСКИЕ СТУЛЬЯ ВАШЕЙ МЕЧТЫ</title>
+
+    <!--
+        файл сброса базовых css свойств браузера
+    -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!--
+        свой кастомный css код
+    -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--
+        тут можно подключить шрифты
+    -->
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
+
+  <!-- Подключаем CSS слайдера -->
+  <link rel="stylesheet" href="./css/simple-adaptive-slider.css">
+  <!-- Подключаем JS слайдера -->
+  <script defer src="./js/simple-adaptive-slider.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // инициализация слайдера
+      var slider = new ItcSimpleSlider('.itcss', {
+        loop: true,
+        autoplay: true,
+        interval: 5000,
+        swipe: true
+      });
+    });
+
+    slider.autoplay();
+  </script>
+    <style>
+      /* стили для элемента body */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+          sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      }
+  
+      /* дополнительные стили для этого примера */
+      .slider__items {
+        counter-reset: slide;
+      }
+  
+      .slider__item {
+        counter-increment: slide;
+      }
+  
+      .slider__item>div::before {
+        content: counter(slide);
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #fff;
+        font-style: italic;
+        font-size: 32px;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <!--
+        стандартная html разметка, при желании ее можно менять
+    -->
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <h1>BB STYLE</h1>
+                <h2>ДИЗАЙНЕРСКИЕ СТУЛЬЯ ВАШЕЙ МЕЧТЫ</h2>
+                <p>Произведем и доставим красивую и удобную мебедь вашей мечты</p>
+            </div>
+            <div class="header__info">
+                <h2>ЧТО НАС ОТЛИЧАЕТ ОТ ДРУГИХ?</h2>
+
+                <ol>
+                  <li> 01 <span class="inf">Собственное производство, которое позволяет дать гарантированное качество и низкую цену.</span></li>
+                  <li> 02 <span class="inf">Индивидуальный подбор для каждого клиента и быстрая скорость ответа менеджеров.</span></li>
+                  <li> 03 <span class="inf inf2">12 месяцев гарантии от производства на все модели стульев.</span></li>
+                </ol>
+
+                <button class="collapsible">Подробности о компании</button>
+                <div class="content">
+                    <p>Доступная и качественная Дизайнерская мебель Казахстанского производства под запросы клиентов. Вы можете подобрать для себя нужную модель стульев, ткань, материал, цвет, ножки и декоративные элементы. Полная свобода в создании стульев под Ваши потребности.</p>
+                </div>
+
+                <a class="tel" href="tel:+77055837474">Бесплатная консультация</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="works">
+                <h2>Наши работы</h2>
+                <div class="sim-slider">
+                  <ul class="sim-slider-list" id="first">
+                    <li><img src="http://pvbk.spb.ru/inc/slider/imgs/no-image.gif" alt="screen"></li> <!-- это экран -->
+                    <li class="sim-slider-element"><img src="./img/slider__img/1.jpg" alt="0"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/2.jpg" alt="1"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/3.jpg" alt="2"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/4.jpg" alt="3"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/5.jpg" alt="4"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/6.jpg" alt="5"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/7.jpg" alt="0"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/8.jpg" alt="1"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/9.jpg" alt="2"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/10.jpg" alt="3"></li>
+                    <li class="sim-slider-element"><img src="./img/slider__img/11.jpg" alt="4"></li>
+                  </ul>
+                  <div class="sim-slider-arrow-left"></div>
+                  <div class="sim-slider-arrow-right"></div>
+                  <div class="sim-slider-dots"></div>
+                </div>
+                
+            </section>
+        
+            <section class="price">
+              <h2>ЦЕНОВОЙ ДИАПАЗОН</h2>
+                <div class="price__img">
+                  <img src="./img/bg/price.png" alt="">
+                </div>
+
+                <div class="credit">
+                  <img src="./img/bg/credit.png" alt="">
+                </div>
+                <a class="tel" href="tel:+77055837474">Бесплатная консультация</a>
+
+            </section>
+        
+            <section class="answer">
+              <h2>Ответы на частые вопросы</h2>
+                    <button class="collapsible">Чем отличаются ткани?</button>
+                    <div class="content">
+                    <p>Самая популярная ткань — велюр.
+                      Тёплая,мягкая ткань ,может быть с блеском и пальчиковым эффектом,может быть без. Хорошо моется и держит повреждения ,в том числе и от животных. Самый большой выбор цветов,рисунков и фактур.
+                      
+                      Искусственная замша-вторая по популярности ткань для мебели. Более плотная, более живучая ткань. Может быть с пальчиковым эффектом и блеском,может быть без. Большой выбор цветов и фактур.
+                      Фактура есть гладкая замша, под кожу, под камень и др.
+                                            
+                      Рогожка- более плотная плетёная ткань. Мягкости от средней до жёсткой. Очень большой выбор цветов,фактур и плетений. Много тканей с меланжевым эффектом.
+                      
+                      Кожа. Высококачественный материал с самыми высокими характеристиками по устойчивости к загрязнениям,повреждениям, при этом очень благородно стареет. Нельзя держать на свету и использовать химические вещества.
+                      
+                      </p>
+                    </div>
+                    <button class="collapsible">Сколько стоит доставка?</button>
+                    <div class="content">
+                    <p>ОТГРУЖАЕМ / ЗАГРУЖАЕМ СТУЛЬЯ В ЦЕХУ НА ТРАНСПОРТ, КОТОРЫЙ ДОВЕЗЕТ ИХ ДО ФУРЫ
+                      <ul>
+                        <li>РАЗГРУЖАЕМ И СДАЕМ СТУЛЬЯ ПРИЕМА-СДАТЧИКАМ (АДМИНИСТРАТОРАМ) ФУР</li>
+                        <li>ПРЕДОСТАВАЯЕМ ДАННЫЕ ПОЛУЧАТЕЛЯ (имя, номер телефона)</li>
+                        <li>ОНИ ВЫДАЮТ КВИТАНЦИЮ О ТОМ , ЧТО ПРИНЯЛИ ГРУЗ</li>
+                        <li>ДЕЛАЕМ ФОТО, ВИДЕО ОТЧЕТ О ТОМ , ЧТО СДАЛИ СТУЛЬЯ ФУРЕ И ПОЛУЧИЛИ  КВИТАНЦИЮ </li>
+                        <li>ПРЕДОСТАВАЯЕМ ДАННЫЕ ПОЛУЧАТЕЛЯ (имя, номер телефона)</li>
+                      </ul>
+                    </p>
+                    <p>
+                      ДРУГИЕ ГОРОДА
+                        (ОПТОМ/РОЗНИЦА)
+                        - ОТ 1 000 пг ДО 3 500тг
+                        (НА ОДИН СТУЛ)
+
+                        СПОСОБЫ ДОСТАВКИ :
+                        <ul>
+                          <li>ЧЕРЕЗ ЛОГИСТИЧЕСКИЕ КОМПАНИИ </li>
+                          <li>ЧЕРЕЗ INDRIVER</li>
+                          <li>ЧЕРЕЗ ФУРЫ</li>
+                        </ul>
+                    </p>
+                    </div>
+                    <button class="collapsible">Как можно оплатить заказ?</button>
+                    <div class="content">
+                    <p>У нас есть разные способы оплаты для вашего удобства.
+
+                      Яндекс.Касса
+                      По счету
+                      Рассрочка/Кредит
+                      Картой через банковский терминал
+                      Наличными</p>
+                    </div>
+                    <button class="collapsible">Где можно посмотреть мебель вживую?</button>
+                    <div class="content">
+                    <p>Мебель вживую вы можете посмотреть в нашем шоуруме в Алматы:</p>
+                    <p> BB Style
+                    <p>ТЦ Жибек Жолы, проспект Жибек Жолы, 135, 4 этаж; D3 бутик, Алматы</p>
+                    </div>
+                    
+            </section>
+            <section class="rewiew">
+                <h2>Отзывы</h2>
+                <div class="itcss">
+                  <div class="itcss__wrapper">
+                    <div class="itcss__items">
+                      <div class="itcss__item">
+                        <div style="height: 950px;">
+                          <img src="./img/otz/WhatsApp Image 2022-05-02 at 19.06.11.jpeg" alt="">
+                        </div>
+                      </div>
+                      <div class="itcss__item">
+                        <div style="height: 950px;">
+                            <img src="./img/otz/WhatsApp Image 2022-05-02 at 19.06.34.jpeg" alt="">
+                        </div>
+                      </div>
+                      <div class="itcss__item">
+                        <div style="height: 950px;">
+                          <img src="./img/otz/WhatsApp Image 2022-05-06 at 01.17.44.jpeg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
+                  <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
+                </div>
+            </section>
+            <section class="question">
+                <h2>Остались вопросы?</h2>
+                  <div class="aaa">
+                    <img src="./img/bg/vop.png" alt="">
+                    <div class="sociall">
+                      <a href=""><img src="./img/otz/whatsapp-icon-logo-6E793ACECD-seeklogo.com.png" alt=""></a>
+                    </div>
+                    <div class="socialll">
+                      <a href=""><img src="./img/otz/174855.png" alt=""></a>
+                    </div>
+                  </div>
+                <a class="tel" href="tel:+77055837474">Бесплатная консультация</a>
+            </section>
+            <section class="adress">
+              <h2>Наш адрес</h2>
+                
+              ТЦ Жибек Жолы, проспект Жибек Жолы, 135, 4 этаж; D3 бутик<br><br>
+           
+              <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/70000001031428794/center/76.92923069000244,43.26167491108293/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a><div class="dg-widget-link"><a href="http://2gis.kz/almaty/firm/70000001031428794/photos/70000001031428794/center/76.92923069000244,43.26167491108293/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/almaty/center/76.929239,43.261095/zoom/16/routeTab/rsType/bus/to/76.929239,43.261095╎Zhibek Zholy, многофункциональный торговый центр?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Zhibek Zholy, многофункциональный торговый центр</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":43.26167491108293,"lon":76.92923069000244,"zoom":16},"opt":{"city":"almaty"},"org":[{"id":"70000001031428794"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>            </section>
+          
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+          <h2>Контакты для связи</h2>
+          <a class="tel" href="tel:+77055837474" style="background-color: rgb(45, 177, 45);">Телефон</a> <br>
+          <a class="tel" href="tel:+77055837474" style="background-color: rgb(40, 133, 40);">Вотцап</a> <br>
+          <a class="tel" href="tel:+77055837474" style="background-color: rgb(174, 43, 214);">Инста</a> <br>
+          <a class="tel" href="tel:+77055837474" style="background-color: rgb(22, 27, 22);">Тикток</a> <br>
+
+        </div>
+    </footer>
+    <!--
+        подлючаем js
+    -->
+    <script src="./js/index.js"></script>
+    <script src="./js/splide.min.js"></script>
+    <script src="./js/slide.js"></script>
+    <script>new Sim();</script>
+ 
+</body>
+</html>
